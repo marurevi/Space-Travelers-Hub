@@ -1,0 +1,22 @@
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem;
+}
+
+.nav * {
+  margin-right: 2em;
+}
+
+.nav div {
+  display: flex;
+  align-items: center;
+}
+
+.nav ul * {
+  color: black;
+  text-decoration: none;
+}

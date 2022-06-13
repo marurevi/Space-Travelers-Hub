@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import './App.css';
+import './css/App.css';
 import Navigator from './components/Navigator';
 import Rockets from './components/Rockets';
 import MyProfile from './components/MyProfile';
@@ -14,7 +14,6 @@ function App() {
         <Route path="/missions" element={<Missions />} />
         <Route path="/myProfile" element={<MyProfile />} />
       </Routes>
-
     </div>
   );
 }

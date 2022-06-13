@@ -26,21 +26,21 @@ export default function reducer(state = [], action = {}) {
 // Action Creators
 export function getAllBooks() {
   return async (dispatch) => {
-    const books = await getApiData();
-    dispatch({ type: BOOKS_DEFAULT, payload: books });
+    // const books = await getApiData();
+    dispatch({ type: BOOKS_DEFAULT });
   };
 }
 
 export function addBook(book) {
   return async (dispatch) => {
-    await addApiData(book);
+    // await addApiData(book);
     dispatch({ type: ADDNEW, payload: book });
   };
 }
 
 export function deleteBook(id) {
   return async (dispatch) => {
-    await deleteApiData(id);
+    // await deleteApiData(id);
     dispatch({ type: DELETE, payload: id });
   };
 }

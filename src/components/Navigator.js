@@ -5,8 +5,11 @@ import img from '../images/planet.png';
 export default function Navigator() {
   return (
     <nav>
-      <div>
-        <img src={img} alt="logo" />
+      <div className="nav">
+        <div>
+          <img src={img} alt="logo" width={100} />
+          <h1>SPACE TRAVELERS&apos; HUB</h1>
+        </div>
         <ul>
           <Link to="/">Rockets</Link>
           {' '}
