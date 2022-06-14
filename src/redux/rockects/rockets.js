@@ -1,4 +1,4 @@
-import fetchRockets from '../helpers/API_rockets';
+import fetchRockets from '../../helpers/API_rockets';
 // Actions
 const SHOW_ROCKETS = 'rockets/SHOW_ROCKETS';
 
