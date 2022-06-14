@@ -1,22 +1,15 @@
+import getApiMissions from '../../helpers/API-missions';
+
 // Actions
-const BOOKS_DEFAULT = 'bookstore/books/BOOKS_DEFAULT';
-const ADDNEW = 'bookstore/books/ADDNEW';
-const DELETE = 'bookstore/books/REMOVE';
+const GET_MISSIONS = 'space-travelers-hub/missions/GET_MISSIONS';
+const JOIN = 'space-travelers-hub/missions/JOIN';
+const LEAVE = 'space-travelers-hub/missions/REMOVE';
 
 // Reducer
 export default function reducer(state = [], action = {}) {
   switch (action.type) {
-    case BOOKS_DEFAULT:
+    case GET_MISSIONS:
       return action.payload;
-
-    case ADDNEW:
-      return [
-        ...state,
-        action.payload,
-      ];
-
-    case DELETE:
-      return [...state.filter((book) => (book.id !== action.payload))];
 
     default:
       return state;
@@ -24,23 +17,23 @@ export default function reducer(state = [], action = {}) {
 }
 
 // Action Creators
-export function getAllBooks() {
-  return async (dispatch) => {
-    // fetch api
-    dispatch({ type: BOOKS_DEFAULT });
-  };
-}
+const getAllMissions = async (dispatch) => {
+  const missions = await getApiMissions();
+  dispatch({ type: GET_MISSIONS, payload: missions });
+};
 
-export function addBook(book) {
+export function joinMission(book) {
   return async (dispatch) => {
   // fetch api
-    dispatch({ type: ADDNEW, payload: book });
+    dispatch({ type: JOIN, payload: book });
   };
 }
 
-export function deleteBook(id) {
+export function leaveMission(id) {
   return async (dispatch) => {
     // fetch api
-    dispatch({ type: DELETE, payload: id });
+    dispatch({ type: LEAVE, payload: id });
   };
 }
+
+export { getAllMissions };
