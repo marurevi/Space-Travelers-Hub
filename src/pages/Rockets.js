@@ -4,24 +4,24 @@ import Rockets from '../components/Rockets';
 import { getRockets } from '../redux/rockects/rockets';
 
 export default function rocketsPage() {
-  const rockets = useSelector((state) => state.rockets);
-  console.log(rockets);
   const dispatch = useDispatch();
-
+  const rockets = useSelector((state) => state.rockets);
   useEffect(() => {
     dispatch(getRockets);
   }, []);
 
   return (
-    <section>
-      {rockets && rockets.map((rocket) => (
-        <Rockets
-          id={rocket.id}
-          name={rocket.rocket_name}
-          description={rocket.description}
-          img={rocket.flickr_images}
-        />
-      ))}
-    </section>
+    <div>
+      {rockets && rockets.map(
+        (rocket) => (
+          <Rockets
+            key={rocket.id}
+            name={rocket.rocket_name}
+            description={rocket.description}
+            img={rocket.flickr_images}
+          />
+        ),
+      )}
+    </div>
   );
 }

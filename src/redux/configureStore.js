@@ -5,10 +5,10 @@ import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 import rocketReducer from './rockects/rockets';
 
-const reducers = combineReducers({
-  rockets: rocketReducer,
+const rootReducer = combineReducers({
+  rocketReducer,
 });
 
-const store = createStore(reducers, applyMiddleware(thunk, logger));
+const store = createStore(rootReducer, applyMiddleware(thunk, logger));
 
 export default store;

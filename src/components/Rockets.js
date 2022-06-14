@@ -1,3 +1,5 @@
+import React from 'react';
+
 const rocket = (props) => {
   const { name, img, description } = props;
   return (
