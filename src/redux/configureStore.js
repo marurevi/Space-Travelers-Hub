@@ -3,10 +3,10 @@ import {
 } from 'redux';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
-import rocketReducer from './rockects/rockets';
+import rockets from './rockects/rockets';
 
 const rootReducer = combineReducers({
-  rocketReducer,
+  rockets,
 });
 
 const store = createStore(rootReducer, applyMiddleware(thunk, logger));

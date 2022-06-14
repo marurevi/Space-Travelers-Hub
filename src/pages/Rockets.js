@@ -12,13 +12,14 @@ export default function rocketsPage() {
 
   return (
     <div>
+      <h2>rockets</h2>
       {rockets && rockets.map(
         (rocket) => (
           <Rockets
             key={rocket.id}
-            name={rocket.rocket_name}
+            name={rocket.name}
             description={rocket.description}
-            img={rocket.flickr_images}
+            img={rocket.img}
           />
         ),
       )}
