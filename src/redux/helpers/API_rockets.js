@@ -10,6 +10,4 @@ const fetchRockets = async () => {
   return rockets;
 };
 
-console.log(fetchRockets());
-
 export default fetchRockets;

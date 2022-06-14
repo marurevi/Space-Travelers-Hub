@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import img from '../images/planet.png';
+import '../css/Navigator.css';
 
 export default function Navigator() {
   return (
