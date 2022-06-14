@@ -1,11 +1,14 @@
-import fetchRockets from '../helpers/API_rockets';
+import fetchRockets from '../../helpers/API_rockets';
 // Actions
 const SHOW_ROCKETS = 'rockets/SHOW_ROCKETS';
 
 // Action Creators
-const getRockets = () => async (dispatch) => {
-  const rockets = await fetchRockets();
-  dispatch({ type: SHOW_ROCKETS, payload: rockets });
+const getRockets = async (dispatch, getState) => {
+  const { rockets: currentRockets } = getState();
+  if (currentRockets.length === 0) {
+    const rockets = await fetchRockets();
+    dispatch({ type: SHOW_ROCKETS, payload: rockets });
+  }
 };
 
 // Reducer
