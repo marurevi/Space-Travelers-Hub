@@ -1,5 +1,17 @@
-export default function Rockets() {
+import React from 'react';
+
+const rocket = (props) => {
+  const { name, img, description } = props;
   return (
-    <p>hi</p>
+    <div>
+      <div>
+        <img src={img} alt="rocket" />
+      </div>
+      <h4>{name}</h4>
+      <p>{description}</p>
+      <button type="button">Reserve Rocket</button>
+    </div>
   );
-}
+};
+
+export default rocket;

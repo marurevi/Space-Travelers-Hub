@@ -1,46 +1,22 @@
+import fetchRockets from '../helpers/API_rockets';
 // Actions
-const BOOKS_DEFAULT = 'bookstore/books/BOOKS_DEFAULT';
-const ADDNEW = 'bookstore/books/ADDNEW';
-const DELETE = 'bookstore/books/REMOVE';
+const SHOW_ROCKETS = 'rockets/SHOW_ROCKETS';
+
+// Action Creators
+const getRockets = () => async (dispatch) => {
+  const rockets = await fetchRockets();
+  dispatch({ type: SHOW_ROCKETS, payload: rockets });
+};
 
 // Reducer
-export default function reducer(state = [], action = {}) {
+const initialState = [];
+export default function reducer(state = initialState, action = {}) {
   switch (action.type) {
-    case BOOKS_DEFAULT:
+    case SHOW_ROCKETS:
       return action.payload;
-
-    case ADDNEW:
-      return [
-        ...state,
-        action.payload,
-      ];
-
-    case DELETE:
-      return [...state.filter((book) => (book.id !== action.payload))];
-
     default:
       return state;
   }
 }
 
-// Action Creators
-export function getAllBooks() {
-  return async (dispatch) => {
-    // const books = await getApiData();
-    dispatch({ type: BOOKS_DEFAULT });
-  };
-}
-
-export function addBook(book) {
-  return async (dispatch) => {
-    // await addApiData(book);
-    dispatch({ type: ADDNEW, payload: book });
-  };
-}
-
-export function deleteBook(id) {
-  return async (dispatch) => {
-    // await deleteApiData(id);
-    dispatch({ type: DELETE, payload: id });
-  };
-}
+export { getRockets };
