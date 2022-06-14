@@ -1,0 +1,22 @@
+
+table {
+  margin: 2em 4em;
+}
+
+table * {
+  text-align: start;
+  align-items: center;
+  padding: 0.5em;
+  border: solid gray 1px;
+}
+
+.name {
+  font-weight: bold;
+  text-align: center;
+}
+
+thead {
+  font-weight: bolder;
+  align-items: center;
+  justify-items: center;
+}
