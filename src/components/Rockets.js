@@ -1,8 +1,9 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 import { bookRockets } from '../redux/rockects/rockets';
 
-const rocket = (props) => {
+export default function Rocket(props) {
   const {
     name, img, description, id, reserved,
   } = props;
@@ -10,6 +11,7 @@ const rocket = (props) => {
   const reserve = () => {
     dispatch(bookRockets(id));
   };
+  const reservedRocket = reserved ? 'Reserve' : 'You have made a revervation!';
   return (
     <div>
       <div>
@@ -21,10 +23,16 @@ const rocket = (props) => {
         type="button"
         onClick={reserve}
       >
-        Reserve
+        {reservedRocket}
       </button>
     </div>
   );
-};
+}
 
-export default rocket;
+Rocket.propTypes = {
+  name: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  reserved: PropTypes.bool.isRequired,
+  id: PropTypes.number.isRequired,
+};
