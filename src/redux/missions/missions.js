@@ -1,12 +1,14 @@
+import getApiMissions from '../../helpers/API-missions';
+
 // Actions
-const MISSIONS_DEFAULT = 'space-travelers-hub/missions/MISSIONS_DEFAULT';
+const GET_MISSIONS = 'space-travelers-hub/missions/GET_MISSIONS';
 const JOIN = 'space-travelers-hub/missions/JOIN';
 const LEAVE = 'space-travelers-hub/missions/REMOVE';
 
 // Reducer
 export default function reducer(state = [], action = {}) {
   switch (action.type) {
-    case MISSIONS_DEFAULT:
+    case GET_MISSIONS:
       return action.payload;
 
     default:
@@ -15,9 +17,10 @@ export default function reducer(state = [], action = {}) {
 }
 
 // Action Creators
-export function getAllMissions(missions) {
-  return { type: MISSIONS_DEFAULT, payload: missions };
-}
+const getAllMissions = async (dispatch) => {
+  const missions = await getApiMissions();
+  dispatch({ type: GET_MISSIONS, payload: missions });
+};
 
 export function joinMission(book) {
   return async (dispatch) => {
@@ -32,3 +35,5 @@ export function leaveMission(id) {
     dispatch({ type: LEAVE, payload: id });
   };
 }
+
+export { getAllMissions };
