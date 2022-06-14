@@ -11,6 +11,9 @@ export default function reducer(state = [], action = {}) {
     case GET_MISSIONS:
       return action.payload;
 
+    case JOIN:
+      return action.payload; // CHECK THIS
+
     default:
       return state;
   }
@@ -22,12 +25,9 @@ const getAllMissions = async (dispatch) => {
   dispatch({ type: GET_MISSIONS, payload: missions });
 };
 
-export function joinMission(book) {
-  return async (dispatch) => {
-  // fetch api
-    dispatch({ type: JOIN, payload: book });
-  };
-}
+const joinMission = async (id) => {
+  dispatch({ type: JOIN, payload: id });
+};
 
 export function leaveMission(id) {
   return async (dispatch) => {
@@ -36,4 +36,4 @@ export function leaveMission(id) {
   };
 }
 
-export { getAllMissions };
+export { getAllMissions, joinMission };

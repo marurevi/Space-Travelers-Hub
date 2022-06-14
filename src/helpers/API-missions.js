@@ -10,6 +10,7 @@ const getApiMissions = async () => {
     mission_id: mission.mission_id,
     mission_name: mission.mission_name,
     description: mission.description,
+    reserved: false,
   }));
   return data;
 };
