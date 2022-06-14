@@ -17,9 +17,11 @@ export default function rocketsPage() {
         (rocket) => (
           <Rockets
             key={rocket.id}
+            id={rocket.id}
             name={rocket.name}
             description={rocket.description}
             img={rocket.img}
+            reserved={rocket.reserved}
           />
         ),
       )}
