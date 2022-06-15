@@ -7,8 +7,8 @@ const getApiMissions = async () => {
 
   const res = await response.json();
   const data = res.map((mission) => ({
-    mission_id: mission.mission_id,
-    mission_name: mission.mission_name,
+    id: mission.mission_id,
+    name: mission.mission_name,
     description: mission.description,
     reserved: false,
   }));
