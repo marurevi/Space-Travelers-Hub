@@ -2,6 +2,7 @@ import fetchRockets from '../../helpers/API_rockets';
 // Actions
 const SHOW_ROCKETS = 'rockets/SHOW_ROCKETS';
 const BOOK_ROCKET = 'rockets/BOOK_ROCKET';
+const DELETE_BOOK = 'rockets/DELETE_BOOK';
 
 // Action Creators
 const getRockets = async (dispatch, getState) => {
@@ -17,6 +18,11 @@ const bookRockets = (id) => ({
   payload: id,
 });
 
+const deleteBook = (id) => ({
+  type: DELETE_BOOK,
+  payload: id,
+});
+
 // Reducer
 const initialState = [];
 export default function reducer(state = initialState, action = {}) {
@@ -28,11 +34,18 @@ export default function reducer(state = initialState, action = {}) {
         if (rocket.id !== action.payload) {
           return rocket;
         }
-        return { ...rocket, reserved: !rocket.reserved };
+        return { ...rocket, reserved: true };
+      });
+    case DELETE_BOOK:
+      return state.map((rocket) => {
+        if (rocket.id !== action.payload) {
+          return rocket;
+        }
+        return { ...rocket, reserved: false };
       });
     default:
       return state;
   }
 }
 
-export { getRockets, bookRockets };
+export { getRockets, bookRockets, deleteBook };

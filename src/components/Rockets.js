@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { bookRockets } from '../redux/rockects/rockets';
+import { bookRockets, deleteBook } from '../redux/rockects/rockets';
 
 export default function Rocket(props) {
   const {
@@ -11,7 +11,10 @@ export default function Rocket(props) {
   const reserve = () => {
     dispatch(bookRockets(id));
   };
-  const reservedRocket = reserved ? 'You have made a revervation!' : 'Reserve';
+
+  const unsubscribe = () => {
+    dispatch(deleteBook(id));
+  };
   return (
     <div>
       <div>
@@ -19,12 +22,9 @@ export default function Rocket(props) {
       </div>
       <h4>{name}</h4>
       <p>{description}</p>
-      <button
-        type="button"
-        onClick={reserve}
-      >
-        {reservedRocket}
-      </button>
+      {!reserved
+        ? <button type="button" onClick={reserve}>Reserve</button>
+        : <button type="button" onClick={unsubscribe}>Delete Reservation</button>}
       <span>{reserved === true ? 'Reserved' : '' }</span>
     </div>
   );
