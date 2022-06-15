@@ -11,7 +11,7 @@ export default function Rocket(props) {
   const reserve = () => {
     dispatch(bookRockets(id));
   };
-  const reservedRocket = reserved ? 'Reserve' : 'You have made a revervation!';
+  const reservedRocket = reserved ? 'You have made a revervation!' : 'Reserve';
   return (
     <div>
       <div>
@@ -25,6 +25,7 @@ export default function Rocket(props) {
       >
         {reservedRocket}
       </button>
+      <span>{reserved === true ? 'Reserved' : '' }</span>
     </div>
   );
 }
