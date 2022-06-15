@@ -14,11 +14,11 @@ export default function Navigator() {
         <ul>
           <Link to="/">Rockets</Link>
           {' '}
-          <Link to="/missions">MISSIONS</Link>
+          <Link to="/missions">Missions</Link>
           {' '}
           |
           {' '}
-          <Link to="/myProfile">MY PROFILE</Link>
+          <Link to="/myProfile">My Profile</Link>
         </ul>
       </div>
     </nav>
