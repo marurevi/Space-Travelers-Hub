@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.mission-container h2 {
+  margin-left: 2rem;
+}
+
+.mission-container li {
+  list-style: none;
+  border: gray 1px solid;
+  padding: 1rem 4rem;
+}

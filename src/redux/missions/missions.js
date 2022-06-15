@@ -28,7 +28,7 @@ export default function reducer(state = [], action = {}) {
   }
 }
 
-// Action Creators - THUNK (MIDDLEWARE)
+// Action Creators
 const getAllMissions = async (dispatch) => {
   const missions = await getApiMissions();
   dispatch({ type: GET_MISSIONS, payload: missions });
