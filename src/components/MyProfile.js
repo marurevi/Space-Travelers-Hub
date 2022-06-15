@@ -5,14 +5,16 @@ export default function MyProfile() {
   const missions = useSelector((state) => state.reduMission) || [];
 
   const reservedMissions = missions.filter((mission) => mission.reserved);
-
+  console.log(reservedMissions);
   return (
-    <ul>
-      {
-        reservedMissions
-          ? reservedMissions.forEach((reserved) => <li key={reserved.id}>{reserved.name}</li>)
-          : 'There aren&apos;t missions to display'
-      }
-    </ul>
+    <div className="container">
+      <div className="mission-container">
+        <ul>
+          {reservedMissions.map((element) => <li key={element.id}>{element.name}</li>)}
+        </ul>
+      </div>
+    </div>
+    
+
   );
 }
