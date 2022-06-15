@@ -14,7 +14,13 @@ export default function reducer(state = [], action = {}) {
     case JOIN:
       return state.map((mission) => {
         if (mission.id !== action.payload) return mission;
-        return { ...mission, reserved: !mission.reserved };
+        return { ...mission, reserved: true };
+      });
+
+    case LEAVE:
+      return state.map((mission) => {
+        if (mission.id !== action.payload) return mission;
+        return { ...mission, reserved: false };
       });
 
     default:
@@ -36,7 +42,6 @@ export function joinMission(id) {
 
 export function leaveMission(id) {
   return async (dispatch) => {
-    // fetch api
     dispatch({ type: LEAVE, payload: id });
   };
 }

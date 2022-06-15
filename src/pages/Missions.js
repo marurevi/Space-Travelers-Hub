@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getAllMissions, joinMission } from '../redux/missions/missions';
+import { getAllMissions, joinMission, leaveMission } from '../redux/missions/missions';
 import '../css/Missions.css';
 
 export default function Missions() {
@@ -27,13 +27,11 @@ export default function Missions() {
             <td className="description">{mission.description}</td>
             <td>{mission.reserved ? 'Active Member' : 'NOT A MEMBER'}</td>
             <td>
-              <button
-                type="button"
-                onClick={() => dispatch(joinMission(mission.id))}
-                id={mission.id}
-              >
-                {mission.reserved ? 'Leave Mission' : 'Join Mission'}
-              </button>
+              {
+              !mission.reserved
+                ? <button type="button" onClick={() => dispatch(joinMission(mission.id))} id={mission.id}>{mission.reserved ? 'Leave Mission' : 'Join Mission'}</button>
+                : <button type="button" onClick={() => dispatch(leaveMission(mission.id))} id={mission.id}>{mission.reserved ? 'Leave Mission' : 'Join Mission'}</button>
+            }
             </td>
           </tr>
         ))}
