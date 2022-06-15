@@ -1,6 +1,6 @@
 import getApiMissions from '../../helpers/API-missions';
 
-// Actions
+// Actions types
 const GET_MISSIONS = 'space-travelers-hub/missions/GET_MISSIONS';
 const JOIN = 'space-travelers-hub/missions/JOIN';
 const LEAVE = 'space-travelers-hub/missions/REMOVE';
@@ -10,6 +10,18 @@ export default function reducer(state = [], action = {}) {
   switch (action.type) {
     case GET_MISSIONS:
       return action.payload;
+
+    case JOIN:
+      return state.map((mission) => {
+        if (mission.id !== action.payload) return mission;
+        return { ...mission, reserved: true };
+      });
+
+    case LEAVE:
+      return state.map((mission) => {
+        if (mission.id !== action.payload) return mission;
+        return { ...mission, reserved: false };
+      });
 
     default:
       return state;
@@ -22,16 +34,14 @@ const getAllMissions = async (dispatch) => {
   dispatch({ type: GET_MISSIONS, payload: missions });
 };
 
-export function joinMission(book) {
+export function joinMission(id) {
   return async (dispatch) => {
-  // fetch api
-    dispatch({ type: JOIN, payload: book });
+    dispatch({ type: JOIN, payload: id });
   };
 }
 
 export function leaveMission(id) {
   return async (dispatch) => {
-    // fetch api
     dispatch({ type: LEAVE, payload: id });
   };
 }
