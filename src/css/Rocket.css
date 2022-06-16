@@ -1,6 +1,6 @@
 .rocket {
   display: flex;
-  gap:1.5rem;
+  gap: 1.5rem;
 }
 
 .rocket-describe {
@@ -28,7 +28,7 @@
   cursor: pointer;
 }
 
-.reserve:hover{
+.reserve:hover {
   background-color: rgb(0, 157, 255, 0.4);
   transition: 0.4s;
 }
@@ -54,6 +54,6 @@
   color: #fff;
   border-radius: 5px;
   padding: 0.2rem;
-  margin:0 0.5rem 0 0;
+  margin: 0 0.5rem 0 0;
   font-size: 12px;
 }
