@@ -25,6 +25,12 @@
   border-radius: 5px;
   padding: 0.6rem;
   font-weight: 600;
+  cursor: pointer;
+}
+
+.reserve:hover{
+  background-color: rgb(0, 157, 255, 0.4);
+  transition: 0.4s;
 }
 
 .cancel {
@@ -33,6 +39,13 @@
   border-radius: 5px;
   padding: 0.6rem;
   font-weight: 600;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.cancel:hover {
+  background-color: rgb(247, 106, 59);
+  transition: 0.4s;
 }
 
 .badge {
