@@ -29,21 +29,17 @@ export default function reducer(state = [], action = {}) {
 }
 
 // Action Creators
-const getAllMissions = async (dispatch) => {
-  const missions = await getApiMissions();
-  dispatch({ type: GET_MISSIONS, payload: missions });
+const getAllMissions = async (dispatch, getState) => {
+  const { reduMission: currentMissions } = getState();
+  console.log(currentMissions);
+  if (currentMissions && currentMissions.length === 0) {
+    const missions = await getApiMissions();
+    dispatch({ type: GET_MISSIONS, payload: missions });
+  }
 };
 
-export function joinMission(id) {
-  return async (dispatch) => {
-    dispatch({ type: JOIN, payload: id });
-  };
-}
+const joinMission = (id) => ({ type: JOIN, payload: id });
 
-export function leaveMission(id) {
-  return async (dispatch) => {
-    dispatch({ type: LEAVE, payload: id });
-  };
-}
+const leaveMission = (id) => ({ type: LEAVE, payload: id });
 
-export { getAllMissions };
+export { getAllMissions, joinMission, leaveMission };
