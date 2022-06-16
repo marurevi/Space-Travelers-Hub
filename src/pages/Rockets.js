@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import Rocket from '../components/Rockets';
 import { getRockets } from '../redux/rockects/rockets';
+import '../css/Rockets.css';
 
 export default function rocketsPage() {
   const dispatch = useDispatch();
@@ -11,8 +12,8 @@ export default function rocketsPage() {
   }, []);
 
   return (
-    <div>
-      <h2>rockets</h2>
+    <div className="rockets_container">
+      <h2>Rockets</h2>
       {rockets && rockets.map(
         (rocket) => (
           <Rocket

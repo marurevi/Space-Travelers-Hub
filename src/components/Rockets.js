@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { bookRockets, deleteBook } from '../redux/rockects/rockets';
+import '../css/Rocket.css';
 
 export default function Rocket(props) {
   const {
@@ -15,17 +16,25 @@ export default function Rocket(props) {
   const unsubscribe = () => {
     dispatch(deleteBook(id));
   };
+
   return (
-    <div>
+    <div className="rocket">
       <div>
-        <img src={img} alt="rocket" />
+        <img className="photo" src={img} alt="rocket" />
       </div>
-      <h4>{name}</h4>
-      <p>{description}</p>
-      {!reserved
-        ? <button type="button" onClick={reserve}>Reserve</button>
-        : <button type="button" onClick={unsubscribe}>Delete Reservation</button>}
-      <span>{reserved === true ? 'Reserved' : '' }</span>
+      <div className="rocket-describe">
+        <h4 className="name">{name}</h4>
+        <p>
+          <span className={reserved ? 'badge' : null}>
+            {reserved === true ? 'Reserved' : '' }
+          </span>
+          {description}
+        </p>
+        {!reserved
+          ? <button className="reserve" type="button" onClick={reserve}>Reserve Rocket</button>
+          : <button className="cancel" type="button" onClick={unsubscribe}>Cancel Reservation</button>}
+
+      </div>
     </div>
   );
 }
