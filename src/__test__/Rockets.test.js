@@ -64,7 +64,7 @@ describe('Rockets page component', () => {
     expect(screen.queryByText('Falcon 1')).not.toBeNull();
   });
 
-  it('Should math de snapshot', async () => {
+  it('Should match the snapshot', async () => {
     const dom = render(<Provider store={store}><Rockets /></Provider>);
     await act(() => expect(dom).toMatchSnapshot());
   });
