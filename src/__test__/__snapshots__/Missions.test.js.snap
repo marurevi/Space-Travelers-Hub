@@ -1,27 +1,49 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Rockets page component Should math de snapshot 1`] = `
+exports[`Tests: Missions Should match the snapshot 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div
-        class="rockets_container"
-      >
-        <h2>
-          Rockets
-        </h2>
-      </div>
+      <table>
+        <thead>
+          <tr>
+            <td>
+              NAME MISSION
+            </td>
+            <td>
+              DESCRIPTION
+            </td>
+            <td
+              colspan="2"
+            >
+              Status
+            </td>
+          </tr>
+        </thead>
+        <tbody />
+      </table>
     </div>
   </body>,
   "container": <div>
-    <div
-      class="rockets_container"
-    >
-      <h2>
-        Rockets
-      </h2>
-    </div>
+    <table>
+      <thead>
+        <tr>
+          <td>
+            NAME MISSION
+          </td>
+          <td>
+            DESCRIPTION
+          </td>
+          <td
+            colspan="2"
+          >
+            Status
+          </td>
+        </tr>
+      </thead>
+      <tbody />
+    </table>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

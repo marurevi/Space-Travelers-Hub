@@ -31,7 +31,6 @@ export default function reducer(state = [], action = {}) {
 // Action Creators
 const getAllMissions = async (dispatch, getState) => {
   const { reduMission: currentMissions } = getState();
-  console.log(currentMissions);
   if (currentMissions && currentMissions.length === 0) {
     const missions = await getApiMissions();
     dispatch({ type: GET_MISSIONS, payload: missions });

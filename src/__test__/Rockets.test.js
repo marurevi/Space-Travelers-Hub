@@ -4,7 +4,7 @@ import {
 import { Provider } from 'react-redux';
 import Rockets from '../pages/Rockets';
 import store from '../redux/configureStore';
-import MyProfile from './MyProfile';
+import MyProfile from '../components/MyProfile';
 
 describe('Rockets page component', () => {
   afterEach(() => {
@@ -64,7 +64,7 @@ describe('Rockets page component', () => {
     expect(screen.queryByText('Falcon 1')).not.toBeNull();
   });
 
-  it('Should math de snapshot', async () => {
+  it('Should match the snapshot', async () => {
     const dom = render(<Provider store={store}><Rockets /></Provider>);
     await act(() => expect(dom).toMatchSnapshot());
   });
