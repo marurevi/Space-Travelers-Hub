@@ -20,7 +20,7 @@ describe('Rockets page component', () => {
         <Rockets />
       </Provider>,
     );
-    await waitFor(() => expect(screen.getAllByText('rockets').length).toBeGreaterThan(0));
+    await waitFor(() => expect(screen.getAllByText('Rockets').length).toBeGreaterThan(0));
   });
 
   it('Should reserve a rocket', async () => {
@@ -29,11 +29,11 @@ describe('Rockets page component', () => {
         <Rockets />
       </Provider>,
     );
-    const button = await screen.findAllByText('Reserve');
+    const button = await screen.findAllByText('Reserve Rocket');
     fireEvent.click(button[0]);
 
     const reserveBadge = await screen.findAllByText('Reserved');
-    const cancelButton = await screen.findAllByText('Delete Reservation');
+    const cancelButton = await screen.findAllByText('Cancel Reservation');
     expect(reserveBadge.length).toBe(1);
     expect(cancelButton.length).toBe(1);
   });
@@ -44,19 +44,19 @@ describe('Rockets page component', () => {
         <Rockets />
       </Provider>,
     );
-    const reserveButton = await screen.findAllByText('Reserve');
+    const reserveButton = await screen.findAllByText('Reserve Rocket');
     fireEvent.click(reserveButton[0]);
 
-    const cancelButton = await screen.findAllByText('Delete Reservation');
+    const cancelButton = await screen.findAllByText('Cancel Reservation');
     fireEvent.click(cancelButton[0]);
 
-    const button = await screen.findAllByText('Reserve');
+    const button = await screen.findAllByText('Reserve Rocket');
     expect(button.length).toBe(4);
   });
 
   it('Should contain my rockets reservations', async () => {
     const { unmount } = render(<Provider store={store}><Rockets /></Provider>);
-    const reserveButton = await screen.findAllByText('Reserve');
+    const reserveButton = await screen.findAllByText('Reserve Rocket');
     fireEvent.click(reserveButton[0]);
     unmount();
 
