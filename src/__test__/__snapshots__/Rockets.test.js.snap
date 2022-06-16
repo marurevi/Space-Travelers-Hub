@@ -5,17 +5,21 @@ Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div>
+      <div
+        class="rockets_container"
+      >
         <h2>
-          rockets
+          Rockets
         </h2>
       </div>
     </div>
   </body>,
   "container": <div>
-    <div>
+    <div
+      class="rockets_container"
+    >
       <h2>
-        rockets
+        Rockets
       </h2>
     </div>
   </div>,
