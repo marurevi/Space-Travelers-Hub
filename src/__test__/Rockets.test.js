@@ -4,7 +4,7 @@ import {
 import { Provider } from 'react-redux';
 import Rockets from '../pages/Rockets';
 import store from '../redux/configureStore';
-import MyProfile from './MyProfile';
+import MyProfile from '../components/MyProfile';
 
 describe('Rockets page component', () => {
   afterEach(() => {
