@@ -34,7 +34,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Available Scripts
 
 In the project directory, you can clone the repository with the following link:
-`https://github.com/marurevi/React-Bookstore.git`
+`https://github.com/marurevi/Space-Travelers-Hub`
 
  Once you have clone the repository run:
  `npm install`
