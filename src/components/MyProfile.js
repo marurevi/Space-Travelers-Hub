@@ -11,13 +11,13 @@ export default function MyProfile() {
     <div className="container">
       <div className="mission-container">
         <h2>My Missions</h2>
-        <ul>
+        <ul className="mission-list">
           {reservedMissions.map((element) => <li key={element.id}>{element.name}</li>)}
         </ul>
       </div>
       <div className="rocket-container">
         <h2>My Rockets</h2>
-        <ul>
+        <ul className="rocket-list">
           {reservedRockets.map((element) => <li key={element.id}>{element.name}</li>)}
         </ul>
       </div>
