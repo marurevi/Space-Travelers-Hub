@@ -16,6 +16,7 @@
 > - My Profile
 > The My Profile section displays all reserved rockets and space missions.
 
+<div align="center"><img src="https://user-images.githubusercontent.com/92180054/174206772-9831b450-ef9d-464c-863e-5e7a9d839458.png" alt=""></div>
 
 ## Built With
 
@@ -24,8 +25,7 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://livedemo.com)
-
+[Live Demo](https://space-travelers-marurevi.herokuapp.com/)
 
 # Getting Started with Create React App
 
