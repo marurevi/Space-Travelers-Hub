@@ -1,56 +1,65 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# React & Redux group project - Space Travelers' Hub
 
-> Description the project.
+> We worked with the real live data from the SpaceX API. We built a web application for a company that provides commercial and scientific space travel services. The application allows users to book rockets and join selected space missions.
+
+> ### The Space Travelers' Hub
+> The Space Travelers' Hub consists of Rockets, Missions, and the My Profile section.
+
+> - Rockets
+> The Rockets section displays a list of all available SpaceX rockets. Users can book each rocket by clicking the reservation button or cancel the previously made booking. 
+
+> - Missions
+> The Missions section displays a list of current missions along with their brief description and participation status. There is also a button next to each mission that allows users to join the selected mission or leave the mission the user joined earlier.
+
+> - My Profile
+> The My Profile section displays all reserved rockets and space missions.
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- JavaScript
+- React & Redux
 
 ## Live Demo (if available)
 
 [Live Demo Link](https://livedemo.com)
 
 
-## Getting Started
+# Getting Started with Create React App
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Available Scripts
 
-To get a local copy up and running follow these simple example steps.
+In the project directory, you can clone the repository with the following link:
+`https://github.com/marurevi/React-Bookstore.git`
 
-### Prerequisites
+ Once you have clone the repository run:
+ `npm install`
+ to install all the dependencies that you need.
+ Then you can run a live version with the command `npm start`.
 
-### Setup
+## Author
 
-### Install
+👤 **Mariana Revilla Lérida**
 
-### Usage
-
-### Run tests
-
-### Deployment
-
-
-
-## Authors
-
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@marurevi](https://github.com/marurevi)
+- Twitter: [@MaruRevilla](https://twitter.com/MaruRevilla)
+- LinkedIn: [Mariana-Revilla-Lérida](https://linkedin.com/in/mariana-revilla-l%C3%A9rida-a12aba143)
 
 👤 **Author2**
 
 - GitHub: [@githubhandle](https://github.com/githubhandle)
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+
+👤 **Arturo**
+
+- GitHub: [@Artbsc1992](https://github.com/Artbsc1992)
+- Twitter: [@Arturo_D_Rock](https://twitter.com/Arturo_D_Rock)
+- LinkedIn: [Arturo Hermida](https://www.linkedin.com/in/arturo-hermida29/)
 
 ## 🤝 Contributing
 
