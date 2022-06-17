@@ -11,7 +11,7 @@ export default function Navigator() {
           <img src={img} alt="logo" width={100} />
           <h1>SPACE TRAVELERS&apos; HUB</h1>
         </div>
-        <ul>
+        <ul className="links">
           <Link to="/">Rockets</Link>
           {' '}
           <Link to="/missions">Missions</Link>
