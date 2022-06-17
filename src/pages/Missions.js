@@ -15,8 +15,8 @@ export default function Missions() {
     <table>
       <thead>
         <tr>
-          <td>NAME MISSION</td>
-          <td>DESCRIPTION</td>
+          <td>Mission</td>
+          <td>Description</td>
           <td colSpan={2}>Status</td>
         </tr>
       </thead>
@@ -25,12 +25,12 @@ export default function Missions() {
           <tr key={mission.id}>
             <td className="name">{mission.name}</td>
             <td className="description">{mission.description}</td>
-            <td>{mission.reserved ? 'Active Member' : 'NOT A MEMBER'}</td>
+            <td>{mission.reserved ? <div className="activemember">Active Member</div> : <div className="notmember">NOT A MEMBER</div>}</td>
             <td>
               {
               !mission.reserved
-                ? <button type="button" onClick={() => dispatch(joinMission(mission.id))} id={mission.id}>{mission.reserved ? 'Leave Mission' : 'Join Mission'}</button>
-                : <button type="button" onClick={() => dispatch(leaveMission(mission.id))} id={mission.id}>{mission.reserved ? 'Leave Mission' : 'Join Mission'}</button>
+                ? <button type="button" className="joinBtn" onClick={() => dispatch(joinMission(mission.id))} id={mission.id}>{mission.reserved ? 'Leave Mission' : 'Join Mission'}</button>
+                : <button type="button" className="leaveBtn" onClick={() => dispatch(leaveMission(mission.id))} id={mission.id}>{mission.reserved ? 'Leave Mission' : 'Join Mission'}</button>
             }
             </td>
           </tr>
