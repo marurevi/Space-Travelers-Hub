@@ -1,22 +1,64 @@
 
 table {
   margin: 2em 4em;
+  border: solid gray 1px;
 }
 
 table * {
   text-align: start;
   align-items: center;
   padding: 0.5em;
-  border: solid gray 1px;
+}
+
+table,
+th,
+td {
+  border: 1px solid lightgray;
+  border-collapse: collapse;
 }
 
 .name {
+  display: flex;
+  align-items: flex-start;
   font-weight: bold;
-  text-align: center;
+  text-align: left;
+  border: none;
 }
 
 thead {
   font-weight: bolder;
   align-items: center;
   justify-items: center;
+}
+
+tbody tr:nth-child(2n-1) {
+  background-color: rgb(238, 237, 237);
+}
+
+.notmember {
+  background-color: gray;
+  color: white;
+  border-radius: 5px;
+  min-width: max-content;
+  text-align: center;
+}
+
+.activemember {
+  background-color: rgb(86, 179, 195);
+  color: white;
+  border-radius: 5px;
+  min-width: max-content;
+  text-align: center;
+}
+
+.joinBtn,
+.leaveBtn {
+  min-width: max-content;
+  border-radius: 5px;
+}
+
+.leaveBtn {
+  color: red;
+  border-color: red;
+  background-color: transparent;
 }
