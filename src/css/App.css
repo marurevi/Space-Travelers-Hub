@@ -1,0 +1,7 @@
+*,
+*::before,
+*::after {
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  box-sizing: border-box;
+}
