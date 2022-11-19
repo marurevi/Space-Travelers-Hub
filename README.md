@@ -1,8 +1,69 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+<a name="readme-top"></a>
 
-# React & Redux group project - Space Travelers' Hub
+<div align="center">
+
+  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
+  <br/>
+
+  <h3><b>Microverse README Template</b></h3>
+
+</div>
+
+<!-- TABLE OF CONTENTS -->
+
+# 📗 Table of Contents
+
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+- [👥 Authors](#authors)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [📝 License](#license)
+
+<!-- PROJECT DESCRIPTION -->
+
+# 📖 React & Redux group project - Space Travelers' Hub <a name="about-project"></a>
 
 > We worked with the real live data from the SpaceX API. We built a web application for a company that provides commercial and scientific space travel services. The application allows users to book rockets and join selected space missions.
+
+**[your_project__name]** is a...
+
+## 🛠 Built With <a name="built-with"></a>
+
+### Tech Stack <a name="tech-stack"></a>
+
+> Describe the tech stack and include only the relevant sections that apply to your project.
+
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="https://redux.js.org/">Redux</a></li>
+  </ul>
+</details>
+
+<details>
+  <summary>Server</summary>
+  <ul>
+    <li><a href="https://webpack.js.org/">webpack.js</a></li>
+  </ul>
+</details>
+
+<details>
+<summary>Deploy</summary>
+  <ul>
+    <li><a href="https://app.netlify.com/">Netlify</a></li>
+  </ul>
+</details>
+
+<!-- Features -->
+
+### Key Features <a name="key-features"></a>
 
 > ### The Space Travelers' Hub
 > The Space Travelers' Hub consists of Rockets, Missions, and the My Profile section.
@@ -18,16 +79,21 @@
 
 <div align="center"><img src="https://user-images.githubusercontent.com/92180054/174206772-9831b450-ef9d-464c-863e-5e7a9d839458.png" alt=""></div>
 
-## Built With
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-- JavaScript
-- React & Redux
+<!-- LIVE DEMO -->
 
-## Live Demo (if available)
+## 🚀 Live Demo <a name="live-demo"></a>
 
-[Live Demo](https://space-travelers-marurevi.herokuapp.com/)
+> Add a link to your deployed project.
 
-# Getting Started with Create React App
+- [Live Demo Link](https://space-travelers-hub-marurevi.netlify.app/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+
+## 💻 Getting Started <a name="getting-started"></a>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -41,7 +107,11 @@ In the project directory, you can clone the repository with the following link:
  to install all the dependencies that you need.
  Then you can run a live version with the command `npm start`.
 
-## Author
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- AUTHORS -->
+
+## 👥 Authors <a name="authors"></a>
 
 👤 **Mariana Revilla Lérida**
 
@@ -49,28 +119,46 @@ In the project directory, you can clone the repository with the following link:
 - Twitter: [@MaruRevilla](https://twitter.com/MaruRevilla)
 - LinkedIn: [Mariana-Revilla-Lérida](https://linkedin.com/in/mariana-revilla-l%C3%A9rida-a12aba143)
 
-👤 **Arturo**
+👤 **Arturo Hermida**
 
 - GitHub: [@Artbsc1992](https://github.com/Artbsc1992)
 - Twitter: [@Arturo_D_Rock](https://twitter.com/Arturo_D_Rock)
 - LinkedIn: [Arturo Hermida](https://www.linkedin.com/in/arturo-hermida29/)
 
-## 🤝 Contributing
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](../../issues/).
 
-## Show your support
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SUPPORT -->
+
+## ⭐️ Show your support <a name="support"></a>
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 - Hat tip to anyone whose code was used
 - Inspiration
 - etc
 
-## 📝 License
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This project is [MIT](./LICENCE) licensed.
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
